@@ -1,0 +1,46 @@
+<template name="recipe">
+	{{loading}}
+	{{#with recipe}}
+	<div id="recipe" class="container">
+	  <div class="recipe well">
+		<h2>
+		  {{name}}
+		</h2>
+		<div class="ingredients">
+		  <h3>
+			Ingredients
+		  </h3>
+		  {{#each ingredients}}
+		  <div class="ingredient">
+			{{amount}} {{name}}
+		  </div>
+		  {{/each}}
+		</div>
+		<div class="steps">
+		  <h3>
+			Steps
+		  </h3>
+		  <div class="step">
+			<div class="container">
+				DESCRIPTION
+			</div>
+			  <button class="btn btn-primary next">Done</button>
+		  </div>
+		 		
+		</div>
+	  </div>
+	</div>
+	{{/with}}
+	<div id="timer"></div>
+	{{#with step}}
+	{{#each .}}
+	<div class="container well span6">
+		<div class="container">
+			{{description}}
+		</div>
+		<button id="{{id}}" class="btn done">Done</button>
+	</div>
+	{{/each}}
+	{{/with}}
+	
+</template>

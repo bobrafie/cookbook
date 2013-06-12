@@ -1,0 +1,13 @@
+<template name="recipes">
+	<div class="container">
+		<h1 class="title">Recipes</h1>
+	    <div id="recipes" class="">
+	  	{{#each recipes}}
+	  		<div class="recipe well">
+		  	  <h2><a href="{{recipePath _id}}">{{name}}</a></h2>
+			</div>
+	  	{{/each}}
+	    </div>
+	</div>
+	
+</template>

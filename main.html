@@ -1,0 +1,31 @@
+<head>
+  <title>Cookbook</title>
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="/">Cookbook</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="{{TabActive 'home'}}"><a href="{{homePath}}">Home</a></li>
+          <li class="{{TabActive 'recipes'}}"><a href="{{recipesPath}}">Recipes</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+ <header>You are viewing the <strong>{{currentPage}}</strong> page now.</header>
+ <div id="main">
+  {{renderPage}}
+ </div>
+
+
+</body>
