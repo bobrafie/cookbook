@@ -1,7 +1,7 @@
 class @Workflow
-	
+
 	constructor: (@events, @transitions, @currentState) ->
-	
+
 	transit : (currentStep) ->
 		@events[_.indexOf(@events, _.where(@events, {id:currentStep[0]})[0])].done = true
 		eligibleSteps = []

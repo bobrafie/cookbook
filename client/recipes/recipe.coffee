@@ -21,20 +21,11 @@ Template.recipe.helpers
 				_.flatten(s)
 			
 Template.recipe.events
-		'click button#start' : (event) ->
-			steps = Session.get 'steps'
-			step = Session.get 'step'
-			transitions = Session.get 'transitions'
-			currentStep = step
-			w = new Workflow(steps, transitions, step)
-			newStep = w.transit(currentStep)
-			Session.set 'step', newStep
 		'click button.done' : (event) ->
 			currentStep = [$(event.target).attr('id')]
 			steps = Session.get 'steps'
 			step = Session.get 'step'
 			transitions = Session.get 'transitions'
-			w = new Workflow(steps, transitions, step)
-			newStep = w.transit(currentStep)
-			Session.set 'step', w.currentState
-			Session.set 'steps', w.events
+			Meteor.call 'Workflow.transit', steps, transitions, step, currentStep, (error, result) ->
+				Session.set 'step', result.currentState
+				Session.set 'steps', result.steps
