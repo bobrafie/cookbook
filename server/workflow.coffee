@@ -22,7 +22,6 @@ class @Workflow
 					okToProcede = false
 			if !okToProcede
 				return currentStep
-			#console.debug('I FOUND', eligibleSteps, 'for', currentStep)
 			eligibleSteps = [eligibleSteps]
 		eligibleSteps = _.pluck(eligibleSteps, 'to')
 		eligibleSteps = _.uniq(eligibleSteps,false,(i) ->

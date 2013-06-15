@@ -1,0 +1,141 @@
+[
+	{
+		"name": "Chicken Veracruz",
+		"ingredients": [
+			{
+				"name": "extra-virgin olive oil",
+				"amount": "1 tablespoon"
+			},
+			{
+				"name": "skin-on, bone-in chicken breasts",
+				"amount": "4 (about 1 1/2 pounds)"
+			},
+			{
+				"name": "dried oregano",
+				"amount": "dried oregano"
+			},
+			{
+				"name": "Kosher salt",
+				"amount": ""
+			},
+			{
+				"name": "poblano chile pepper, stemmed and seeded",
+				"amount": "1"
+			},
+			{
+				"name": "white onion",
+				"amount": "1/2"
+			},
+			{
+				"name": "large tomato",
+				"amount": "1"
+			},
+			{
+				"name": "cloves garlic",
+				"amount": "2"
+			},
+			{
+				"name": "chopped mild pickled jalapeno peppers",
+				"amount": "1/2 cup"
+			},
+			{
+				"name": "green olives with pimientos, roughly chopped",
+				"amount": "1/2 cup"
+			},
+			{
+				"name": "dry white wine",
+				"amount": "1 cup"
+			}
+		],
+		"steps": [
+			{
+				"id": "0",
+				"description": "Heat the olive oil in a large deep skillet over high heat"
+			},
+			{
+				"id": "1",
+				"description": "Pat the chicken dry and sprinkle with the oregano and 1 teaspoon salt"
+			},
+			{
+				"id": "2",
+				"description": "Sear the chicken until well browned, about 7 minutes per side"
+			},
+			{
+				"id": "3",
+				"description": "Sear the chicken until well browned, about 7 minutes per side"
+			},
+			{
+				"id": "4",
+				"description": "Meanwhile, slice the poblano into strips and thinly slice the onion"
+			},
+			{
+				"id": "5",
+				"description": "Cut the tomato into 8 wedges and smash the garlic"
+			},
+			{
+				"id": "6",
+				"description": "Once the chicken is browned, scatter the poblano, onion, tomato, garlic, jalapenos and olives over and around the chicken."
+			},
+			{
+				"id": "7",
+				"description": "Cook until the vegetables begin to soften slightly, about 5 minutes"
+			},
+			{
+				"id": "8",
+				"description": "Sprinkle with 1/2 teaspoon salt"
+			},
+			{
+				"id": "9",
+				"description": "Add the wine and bring to a boil; cover and simmer until the chicken is cooked through and the vegetables are soft, about 10 minutes"
+			},
+			{
+				"id": "10",
+				"description": "Serve the chicken with the vegetables"
+			}
+		],
+		"transitions": [
+			{
+				"from": "0",
+				"to": "1"
+			},
+			{
+				"from": "1",
+				"to": [
+					"2",
+					"4"
+				]
+			},
+			{
+				"from": "2",
+				"to": "3"
+			},
+			{
+				"from": "4",
+				"to": "5"
+			},
+			{
+				"from": [
+					"3",
+					"5"
+				],
+				"to": "6"
+			},
+			{
+				"from": "6",
+				"to": "7"
+			},
+			{
+				"from": "7",
+				"to": "8"
+			},
+			{
+				"from": "8",
+				"to": "9"
+			},
+			{
+				"from": "9",
+				"to": "10"
+			}
+		]
+	}
+]
